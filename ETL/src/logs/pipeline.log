@@ -1,0 +1,10 @@
+2025-10-19 14:14:05.441 | INFO     | __main__:<module>:6 - Iniciando pipeline de ETL
+2025-10-19 14:14:05.441 | DEBUG    | __main__:<module>:7 - Pipeline de ETL iniciada
+2025-10-19 14:14:05.441 | WARNING  | __main__:<module>:8 - Pipeline de ETL iniciada
+2025-10-19 14:14:05.441 | ERROR    | __main__:<module>:9 - Pipeline de ETL iniciada
+2025-10-19 14:14:05.441 | CRITICAL | __main__:<module>:10 - Pipeline de ETL iniciada
+2025-10-19 14:15:22.238 | INFO     | __main__:<module>:8 - Iniciando pipeline de ETL
+2025-10-19 14:15:22.238 | DEBUG    | __main__:<module>:9 - Pipeline de ETL iniciada
+2025-10-19 14:15:22.238 | WARNING  | __main__:<module>:10 - Pipeline de ETL iniciada
+2025-10-19 14:15:22.238 | ERROR    | __main__:<module>:11 - Pipeline de ETL iniciada
+2025-10-19 14:15:22.238 | CRITICAL | __main__:<module>:12 - Pipeline de ETL iniciada
