@@ -1,4 +1,4 @@
-.venv
+venv/
 
 #excluir csv, parque e json
 *.csv
