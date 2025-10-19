@@ -1,12 +1,13 @@
 import pandas as pd
 import os
 import glob
-# uma funcao de extract que le e consolida os json
 
+
+# uma funcao de extract que le e consolida os json
 def extrair_dados_e_consolidar(pasta: str) -> pd.DataFrame:
     """
     Função que extrai os dados de um arquivo json e consolida em um DataFrame
-    Args:
+    Args: 
         pasta: str
         pasta onde esta os arquivos json
     Returns:
@@ -15,7 +16,7 @@ def extrair_dados_e_consolidar(pasta: str) -> pd.DataFrame:
     """
     arquivos_json = glob.glob(os.path.join(pasta, '*.json'))
     df_list = [pd.read_json(arquivo) for arquivo in arquivos_json]
-    df_total = pd.concat(df_list, ignore_index=True)
+    df_total = pd.concat(df_list, ignore_index=True) #sem index e concatena os dataframes
     return df_total
 
 # uma funcao que extrai os dados do DataFrame e calcula o KPI de total de vendas
@@ -25,6 +26,7 @@ def calcular_kpi_de_total_de_vendas(df: pd.DataFrame) -> pd.DataFrame:
     Função que cria métricas de negocio
     """
     df["Total"] = df["Quantidade"] * df["Venda"]
+    df["juros"] = df["Quantidade"] * df["Venda"] * 0.05 #juros de 5%
     return df
 
 def carregar_dados(df: pd.DataFrame, format_saida: list):
