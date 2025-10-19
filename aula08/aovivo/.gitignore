@@ -4,3 +4,6 @@
 *.csv
 *.parquet
 *.json
+
+*pycache*
+__pycache__

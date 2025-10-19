@@ -4,14 +4,26 @@ import glob
 # uma funcao de extract que le e consolida os json
 
 def extrair_dados_e_consolidar(pasta: str) -> pd.DataFrame:
+    """
+    Função que extrai os dados de um arquivo json e consolida em um DataFrame
+    Args:
+        pasta: str
+        pasta onde esta os arquivos json
+    Returns:
+        df_total: pd.DataFrame
+        DataFrame com os dados consolidados
+    """
     arquivos_json = glob.glob(os.path.join(pasta, '*.json'))
     df_list = [pd.read_json(arquivo) for arquivo in arquivos_json]
     df_total = pd.concat(df_list, ignore_index=True)
     return df_total
 
-# uma funcao que transforma
+# uma funcao que extrai os dados do DataFrame e calcula o KPI de total de vendas
 
 def calcular_kpi_de_total_de_vendas(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Função que cria métricas de negocio
+    """
     df["Total"] = df["Quantidade"] * df["Venda"]
     return df
 
@@ -25,6 +37,10 @@ def carregar_dados(df: pd.DataFrame, format_saida: list):
         if formato == 'parquet':
             df.to_parquet("dados.parquet", index=False)
 
+
+__name__ == "__main__"
+extrair_dados_e_consolidar()
+@extrair_dados_e_consolidar
 def pipeline_calcular_kpi_de_vendas_consolidado(pasta: str, formato_de_saida: list):
     data_frame = extrair_dados_e_consolidar(pasta)
     data_frame_calculado = calcular_kpi_de_total_de_vendas(data_frame)
