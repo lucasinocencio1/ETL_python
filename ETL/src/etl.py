@@ -3,7 +3,9 @@ import os
 import glob
 from pathlib import Path
 
+from utils_log import log_decorator
 
+@log_decorator
 # uma funcao de extract que le e consolida os json
 def extrair_dados_e_consolidar(pasta: str) -> pd.DataFrame:
     """
@@ -21,7 +23,7 @@ def extrair_dados_e_consolidar(pasta: str) -> pd.DataFrame:
     return df_total
 
 # uma funcao que extrai os dados do DataFrame e calcula o KPI de total de vendas
-
+@log_decorator
 def calcular_kpi_de_total_de_vendas(df: pd.DataFrame) -> pd.DataFrame:
     """
     Função que cria métricas de negocio
@@ -40,7 +42,7 @@ def calcular_kpi_de_total_de_vendas(df: pd.DataFrame) -> pd.DataFrame:
 #         if formato == 'parquet':
 #             df.to_parquet("dados.parquet", index=False)
 
-
+@log_decorator
 def carregar_dados(df: pd.DataFrame, format_saida: list):
     """
     Função que carrega os dados em csv ou parquet e cria pastas output/csv e output/parquet
@@ -56,7 +58,7 @@ def carregar_dados(df: pd.DataFrame, format_saida: list):
             df.to_parquet(output_dir / "parquet" / "dados.parquet", index=False)
             print(f"Dados carregados em parquet com sucesso")
 
-
+@log_decorator
 def pipeline_calcular_kpi_de_vendas_consolidado(pasta: str, formato_de_saida: list):
     """
     Pipeline principal que executa todo o processo ETL
