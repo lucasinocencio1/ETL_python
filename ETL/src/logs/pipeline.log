@@ -1,21 +1,6 @@
-2025-10-19 14:14:05.441 | INFO     | __main__:<module>:6 - Iniciando pipeline de ETL
-2025-10-19 14:14:05.441 | DEBUG    | __main__:<module>:7 - Pipeline de ETL iniciada
-2025-10-19 14:14:05.441 | WARNING  | __main__:<module>:8 - Pipeline de ETL iniciada
-2025-10-19 14:14:05.441 | ERROR    | __main__:<module>:9 - Pipeline de ETL iniciada
-2025-10-19 14:14:05.441 | CRITICAL | __main__:<module>:10 - Pipeline de ETL iniciada
-2025-10-19 14:15:22.238 | INFO     | __main__:<module>:8 - Iniciando pipeline de ETL
-2025-10-19 14:15:22.238 | DEBUG    | __main__:<module>:9 - Pipeline de ETL iniciada
-2025-10-19 14:15:22.238 | WARNING  | __main__:<module>:10 - Pipeline de ETL iniciada
-2025-10-19 14:15:22.238 | ERROR    | __main__:<module>:11 - Pipeline de ETL iniciada
-2025-10-19 14:15:22.238 | CRITICAL | __main__:<module>:12 - Pipeline de ETL iniciada
-2025-10-19 14:23:25.076 | INFO     | __main__:<module>:8 - Iniciando pipeline de ETL
-2025-10-19 14:23:25.077 | DEBUG    | __main__:<module>:9 - Pipeline de ETL iniciada
-2025-10-19 14:23:25.077 | WARNING  | __main__:<module>:10 - Pipeline de ETL iniciada
-2025-10-19 14:23:25.077 | ERROR    | __main__:<module>:11 - Pipeline de ETL iniciada
-2025-10-19 14:23:25.077 | CRITICAL | __main__:<module>:12 - Pipeline de ETL iniciada
-2025-10-19 15:40:46,939 [INFO] Chamando função 'pipeline_calcular_kpi_de_vendas_consolidado' com args ('data', ['csv', 'parquet']) e kwargs {}
-2025-10-19 15:40:46,939 [INFO] Chamando função 'extrair_dados_e_consolidar' com args ('data',) e kwargs {}
-2025-10-19 15:40:46,947 [INFO] Função 'extrair_dados_e_consolidar' retornou             Produto    Categoria  Quantidade  Venda        Data
+2025-10-19 15:59:35 | INFO | Chamando função 'pipeline_calcular_kpi_de_vendas_consolidado' com args ('data', ['csv', 'parquet']) e kwargs {}
+2025-10-19 15:59:35 | INFO | Chamando função 'extrair_dados_e_consolidar' com args ('data',) e kwargs {}
+2025-10-19 15:59:35 | INFO | Função 'extrair_dados_e_consolidar' retornou             Produto    Categoria  Quantidade  Venda        Data
 0    Notebook Gamer  Eletrônicos           7   1500  2023-01-16
 1     Mouse Sem Fio  Eletrônicos          10     30  2023-01-16
 2  Teclado Mecânico  Eletrônicos           3    100  2023-01-16
@@ -25,7 +10,8 @@
 6    Notebook Gamer  Eletrônicos           3   1500  2023-01-15
 7     Mouse Sem Fio  Eletrônicos          10     30  2023-01-15
 8  Teclado Mecânico  Eletrônicos           5    100  2023-01-15
-2025-10-19 15:40:46,948 [INFO] Chamando função 'calcular_kpi_de_total_de_vendas' com args (            Produto    Categoria  Quantidade  Venda        Data
+2025-10-19 15:59:35 | INFO | Função 'extrair_dados_e_consolidar' executada em 0.0105 segundos
+2025-10-19 15:59:35 | INFO | Chamando função 'calcular_kpi_de_total_de_vendas' com args (            Produto    Categoria  Quantidade  Venda        Data
 0    Notebook Gamer  Eletrônicos           7   1500  2023-01-16
 1     Mouse Sem Fio  Eletrônicos          10     30  2023-01-16
 2  Teclado Mecânico  Eletrônicos           3    100  2023-01-16
@@ -35,7 +21,7 @@
 6    Notebook Gamer  Eletrônicos           3   1500  2023-01-15
 7     Mouse Sem Fio  Eletrônicos          10     30  2023-01-15
 8  Teclado Mecânico  Eletrônicos           5    100  2023-01-15,) e kwargs {}
-2025-10-19 15:40:46,950 [INFO] Função 'calcular_kpi_de_total_de_vendas' retornou             Produto    Categoria  Quantidade  Venda        Data  Total  juros
+2025-10-19 15:59:35 | INFO | Função 'calcular_kpi_de_total_de_vendas' retornou             Produto    Categoria  Quantidade  Venda        Data  Total  juros
 0    Notebook Gamer  Eletrônicos           7   1500  2023-01-16  10500  525.0
 1     Mouse Sem Fio  Eletrônicos          10     30  2023-01-16    300   15.0
 2  Teclado Mecânico  Eletrônicos           3    100  2023-01-16    300   15.0
@@ -45,7 +31,8 @@
 6    Notebook Gamer  Eletrônicos           3   1500  2023-01-15   4500  225.0
 7     Mouse Sem Fio  Eletrônicos          10     30  2023-01-15    300   15.0
 8  Teclado Mecânico  Eletrônicos           5    100  2023-01-15    500   25.0
-2025-10-19 15:40:46,952 [INFO] Chamando função 'carregar_dados' com args (            Produto    Categoria  Quantidade  Venda        Data  Total  juros
+2025-10-19 15:59:35 | INFO | Função 'calcular_kpi_de_total_de_vendas' executada em 0.0037 segundos
+2025-10-19 15:59:35 | INFO | Chamando função 'carregar_dados' com args (            Produto    Categoria  Quantidade  Venda        Data  Total  juros
 0    Notebook Gamer  Eletrônicos           7   1500  2023-01-16  10500  525.0
 1     Mouse Sem Fio  Eletrônicos          10     30  2023-01-16    300   15.0
 2  Teclado Mecânico  Eletrônicos           3    100  2023-01-16    300   15.0
@@ -55,5 +42,7 @@
 6    Notebook Gamer  Eletrônicos           3   1500  2023-01-15   4500  225.0
 7     Mouse Sem Fio  Eletrônicos          10     30  2023-01-15    300   15.0
 8  Teclado Mecânico  Eletrônicos           5    100  2023-01-15    500   25.0, ['csv', 'parquet']) e kwargs {}
-2025-10-19 15:40:46,996 [INFO] Função 'carregar_dados' retornou None
-2025-10-19 15:40:46,996 [INFO] Função 'pipeline_calcular_kpi_de_vendas_consolidado' retornou None
+2025-10-19 15:59:35 | INFO | Função 'carregar_dados' retornou None
+2025-10-19 15:59:35 | INFO | Função 'carregar_dados' executada em 0.0408 segundos
+2025-10-19 15:59:35 | INFO | Função 'pipeline_calcular_kpi_de_vendas_consolidado' retornou None
+2025-10-19 15:59:35 | INFO | Função 'pipeline_calcular_kpi_de_vendas_consolidado' executada em 0.0558 segundos

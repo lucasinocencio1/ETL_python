@@ -2,9 +2,11 @@ import pandas as pd
 import os
 import glob
 from pathlib import Path
+from utils_log import time_measure_decorator
 
 from utils_log import log_decorator
 
+@time_measure_decorator
 @log_decorator
 # uma funcao de extract que le e consolida os json
 def extrair_dados_e_consolidar(pasta: str) -> pd.DataFrame:
@@ -23,6 +25,7 @@ def extrair_dados_e_consolidar(pasta: str) -> pd.DataFrame:
     return df_total
 
 # uma funcao que extrai os dados do DataFrame e calcula o KPI de total de vendas
+@time_measure_decorator
 @log_decorator
 def calcular_kpi_de_total_de_vendas(df: pd.DataFrame) -> pd.DataFrame:
     """
@@ -42,6 +45,7 @@ def calcular_kpi_de_total_de_vendas(df: pd.DataFrame) -> pd.DataFrame:
 #         if formato == 'parquet':
 #             df.to_parquet("dados.parquet", index=False)
 
+@time_measure_decorator
 @log_decorator
 def carregar_dados(df: pd.DataFrame, format_saida: list):
     """
@@ -58,6 +62,8 @@ def carregar_dados(df: pd.DataFrame, format_saida: list):
             df.to_parquet(output_dir / "parquet" / "dados.parquet", index=False)
             print(f"Dados carregados em parquet com sucesso")
 
+
+@time_measure_decorator
 @log_decorator
 def pipeline_calcular_kpi_de_vendas_consolidado(pasta: str, formato_de_saida: list):
     """
