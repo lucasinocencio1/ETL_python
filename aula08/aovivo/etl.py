@@ -38,12 +38,11 @@ def carregar_dados(df: pd.DataFrame, format_saida: list):
             df.to_parquet("dados.parquet", index=False)
 
 
-__name__ == "__main__"
-extrair_dados_e_consolidar()
-@extrair_dados_e_consolidar
 def pipeline_calcular_kpi_de_vendas_consolidado(pasta: str, formato_de_saida: list):
+    """
+    Pipeline principal que executa todo o processo ETL
+    """
     data_frame = extrair_dados_e_consolidar(pasta)
     data_frame_calculado = calcular_kpi_de_total_de_vendas(data_frame)
     carregar_dados(data_frame_calculado, formato_de_saida)
-
-# uma funcao que da load em csv ou parquet
+print("Pipeline executado com sucesso") #prova terminal
