@@ -1,1 +1,6 @@
 .venv
+
+#excluir csv, parque e json
+*.csv
+*.parquet
+*.json
