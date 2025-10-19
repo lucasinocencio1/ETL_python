@@ -9,3 +9,5 @@ venv/
 
 *pycache*
 __pycache__
+
+notebook.ipynb
